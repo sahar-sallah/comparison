@@ -1,4 +1,5 @@
 export function getStrapiURL(path = '') {
+    console.log(process.env.NEXT_PUBLIC_STRAPI_API_URL) ;
     return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://natural-horse-317d4163c6.strapiapp.com/'}${path}`;
 }
 
