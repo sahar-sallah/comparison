@@ -1,5 +1,5 @@
 export function getStrapiURL(path = '') {
-    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://natural-horse-317d4163c6.strapiapp.com/'}${path}`;
+    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://natural-horse-317d4163c6.strapiapp.com/'}${path}`;
 }
 
 export function getStrapiMedia(url: string | null) {

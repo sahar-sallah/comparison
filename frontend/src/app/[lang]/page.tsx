@@ -8,7 +8,7 @@ export default async function RootRoute({params}: { params: { lang: string } }) 
       const page = await getPageBySlug('home', params.lang)
       if (page.error && page.error.status == 401)
         throw new Error(
-          'Missing or invalid credentials. Have you created an access token using the Strapi admin panel? https://natural-horse-317d4163c6.strapiapp.com/admin/'
+          'Missing or invalid credentials. Have you created an access token using the Strapi admin panel? http://localhost:1337/admin/'
         )
 
       if (page.data.length == 0 && params.lang !== 'en') return <LangRedirect />
