@@ -90,7 +90,10 @@ export default async function LayoutRoute({
 
 export async function generateStaticParams() {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+  console.log("generateStaticParams layout");
   console.log(process.env.NEXT_PUBLIC_STRAPI_API_TOKEN);
+  console.log(process.env.NEXT_PUBLIC_STRAPI_API_URL);
+
   const path = `/articles`;
   const options = { headers: { Authorization: `Bearer ${token}` } };
   const articleResponse = await fetchAPI(
